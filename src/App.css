@@ -9,6 +9,10 @@
     padding: 5px;
 }
 
+.movie .movieImage {
+    width: 200px;
+}
+
 .movie .movieTitle {
     flex-grow: 1;
     text-decoration: none;
