@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const movies = [
-    { title: 'movie1', year: 2011},
-    { title: 'movie2', year: 2012},
-    { title: 'movie3', year: 2013},
-    { title: 'movie4', year: 2014},
-    { title: 'movie5', year: 2015}
-  ]
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+      .then((res) => { return res.json() })
+      .then((json) => { setMovies(json.data.movies) })
+  }, [])
+
+  console.log('movies: ', movies)
 
   const render = movies.map((item) => {
     return (
       <div className='movie' key={item.title}>
-        <div className='movieTitle'>{item.title}</div>
+        <a className='movieTitle' href={item.url}>{item.title}</a>
         <div className='movieYear'>{item.year}</div>
       </div>
     )
