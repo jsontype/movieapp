@@ -16,6 +16,11 @@
     border-radius: 5px;
 }
 
+.movie .movieYear {
+    font-size: 0.5rem;
+    color: red;
+}
+
 .movie .movieTitle {
     flex-grow: 1;
     text-decoration: none;
@@ -28,9 +33,4 @@
 
 .movie .movieTitle:hover {
     background-color: pink;
-}
-
-.movie .movieYear {
-    font-size: 0.5rem;
-    color: red;
 }
