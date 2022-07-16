@@ -6,9 +6,8 @@
     display: flex;
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
     margin-bottom: 10px;
-    
 }
 
 .movie .movieImage {
