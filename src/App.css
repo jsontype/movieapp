@@ -18,7 +18,12 @@
 .movie .movieTitle {
     flex-grow: 1;
     text-decoration: none;
-    color: black;  
+    color: black;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+
 }
 
 .movie .movieTitle:hover {
