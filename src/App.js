@@ -17,7 +17,7 @@ function App() {
       <div className='movie' key={item.title}>
         <img className='movieImage' src={item.large_cover_image} alt={item.title}></img>
         <a className='movieTitle' href={item.url}>{item.title}
-        <div className='movieGenres'>{[item.genres].join(', ')}</div>
+        <div className='movieGenres'>[장르: {[item.genres].join(', ')}]</div>
         </a>
         <div className='movieYear'>{item.year}</div>
       </div>
