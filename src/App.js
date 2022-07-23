@@ -14,13 +14,16 @@ function App() {
 
   const render = movies.map((item) => {
     return (
-      <div className='movie' key={item.title}>
+      <div className='movie' key={item.id}>
         <img className='movieImage' src={item.large_cover_image} alt={item.title}></img>
+
+
         <a className='movieTitle' href={item.url}>
           {item.rating >= 8 && '🔥'} {item.title}
           <div className='movieRank'> &nbsp;
             (평점 : <span className={item.rating >= 8 ? 'good' : item.rating >= 6 ? 'soso' : 'bad'}>{item.rating}</span> / 10)
           </div>
+          <div className='movieGenres'>[장르: {[item.genres].join(', ')}]</div>
         </a>
         <div className='movieYear'>{item.year}</div>
       </div>
