@@ -29,10 +29,17 @@
     color: black;
     padding-left: 20px;
     display: flex;
-    align-items: center;
     font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .movie .movieTitle:hover {
     background-color: pink;
+}
+
+.movie .movieGenres {
+    font-size : 0.5rem;
+    color: gray;
 }
