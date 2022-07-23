@@ -5,7 +5,7 @@ function App() {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch('https://yts.mx/api/v2/list_movies.json?sort_by=rating')
+    fetch('https://yts.mx/api/v2/list_movies.json')
       .then((res) => { return res.json() })
       .then((json) => { setMovies(json.data.movies) })
   }, [])
@@ -16,7 +16,13 @@ function App() {
     return (
       <div className='movie' key={item.id}>
         <img className='movieImage' src={item.large_cover_image} alt={item.title}></img>
-        <a className='movieTitle' href={item.url}>{item.title}
+
+
+        <a className='movieTitle' href={item.url}>
+          {item.rating >= 8 && '🔥'} {item.title}
+          <div className='movieRank'> &nbsp;
+            (평점 : <span className={item.rating >= 8 ? 'good' : item.rating >= 6 ? 'soso' : 'bad'}>{item.rating}</span> / 10)
+          </div>
           <div className='movieGenres'>[장르: {[item.genres].join(', ')}]</div>
         </a>
         <div className='movieYear'>{item.year}</div>

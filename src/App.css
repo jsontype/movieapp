@@ -39,6 +39,22 @@
     background-color: pink;
 }
 
+.movie .movieRank {
+    font-size: 25px;
+}
+
+.good {
+    color: blue;
+}
+
+.soso {
+    color: yellowgreen;
+}
+
+.bad {
+    color: red;
+}
+
 .movie .movieGenres {
     font-size : 0.5rem;
     color: gray;
