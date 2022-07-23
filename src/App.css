@@ -35,3 +35,19 @@
 .movie .movieTitle:hover {
     background-color: pink;
 }
+
+.movie .movieRank {
+    font-size: 25px;
+}
+
+.good {
+    color: blue;
+}
+
+.soso {
+    color: yellowgreen;
+}
+
+.bad {
+    color: red;
+}
